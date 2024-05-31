@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-
+import daisyui from "daisyui";
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -13,8 +13,18 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        primary: ["Questrial", "sans-serif"],
+        secondary: ["Oswald", "sans-serif"],
+        info: ["Radio Canada Big", "sans-serif"],
+      },
+      colors: {
+        info: "#FF5733",
+        yellow: "#FDB101",
+      },
     },
   },
-  plugins: [],
+
+  plugins: [daisyui],
 };
 export default config;
