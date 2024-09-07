@@ -8,7 +8,7 @@ const DeleteBtn = ({ id }: any) => {
   const { mutate: deleteMutate } = useMutation({
     mutationFn: deleteQuiz,
     onSuccess: (data) => {
-      queryClient.invalidateQueries("quizzes");
+      queryClient.invalidateQueries("quizzes" as any) ;
     },
   });
 
